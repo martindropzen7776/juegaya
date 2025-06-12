@@ -105,10 +105,26 @@ footer a:hover {
             <img src="promo.jpg" alt="Promoción Duplica tu Depósito">
         </div>
         <form>
-<a href="" style="text-decoration: none;">
-            <button type="button">DUPLICAMOS TU PRIMER CARGA!</button>
-        </form>
+<a href="#" id="multiLink" style="text-decoration: none;">
+    <button type="button">¡DUPLICAMOS TU PRIMER CARGA!</button>
 </a>
+
+<script>
+    const links = [
+        'https://wa.me/56966879519?text=Hola%2C%20quiero%20mi%20usuario',
+        'https://wa.me/56956579231?text=Hola%2C%20quiero%20mi%20usuario',
+        'https://wa.me/56956582135?text=Hola%2C%20quiero%20mi%20usuario',
+        'https://wa.me/56956092949?text=Hola%2C%20quiero%20mi%20usuario',
+        'https://wa.me/56956593081?text=Hola%2C%20quiero%20mi%20usuario',
+        'https://wa.me/56956180557?text=Hola%2C%20quiero%20mi%20usuario'
+    ];
+
+    document.getElementById("multiLink").addEventListener("click", function(e) {
+        e.preventDefault();
+        const randomLink = links[Math.floor(Math.random() * links.length)];
+        window.location.href = randomLink;
+    });
+</script>
         <footer>
             <p>JUGAR CON MODERACION. PROHIBIDO EL JUEGO A MENORES DE 18 AÑOS</p>
         </footer>
